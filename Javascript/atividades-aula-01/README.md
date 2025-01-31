@@ -1,0 +1,1 @@
+Lista de exercícios referente a aula do dia 31/01/2025
