@@ -4,3 +4,4 @@ Aula introdutoria sobre Lógica de programação com JavaScript
 -Concatenação
 -Conversão
 -Alert/Prompt
+-Avisos

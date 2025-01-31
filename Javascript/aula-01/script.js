@@ -1,12 +1,12 @@
 console.log("ola mundo");
 
 //exemplo de alert()
-alert("ola mundo 1");
+//alert("ola mundo 1");
 
 //exemplo de confirm()
-var teste = confirm("ola mundo 2");
+//var teste = confirm("ola mundo 2");
     //exibindo opcao escolhina pelo usuário
-    console.log(teste)
+    //console.log(teste)
 
 //exemplo de prompt()
 var testePrompt = prompt("digite seu nome");
