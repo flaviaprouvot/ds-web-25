@@ -58,7 +58,7 @@ class Poltrona{
         return "Exibir opções de massagem.";
     }
     public function emitirAviso(){
-        return "Bateria fraca."
+        return "Bateria fraca.";
     }
     public function reclinar(){
         return "Deseja inclinar a cadeira?";
@@ -79,7 +79,7 @@ class Geladeira{
 
     //métodos
     public function emitirAviso(){
-        return "Geladeira cheia!"
+        return "Geladeira cheia!";
     }
     public function consultarCapacidade(){
         return $capacidade;
@@ -108,7 +108,7 @@ class Mouse{
         return "Bateria baixa!";
     }
     public function conectarBt(){
-        return "Conexão estabelecida!"
+        return "Conexão estabelecida!";
     }
 
 }
