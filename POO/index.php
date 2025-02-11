@@ -10,7 +10,7 @@ class Veiculo{
 
     //método
     public function ligar(){
-
+        return "Carro ligado.";
     }
 }
 
@@ -32,13 +32,13 @@ class TV{
 
     //métodos
     public function ligar(){
-
+        return "TV ligada";
     }
     public function desligar(){
-
+        return "TV desligada";
     }
     public function conectar(){
-
+        return "TV conectada";
     }
 }
 
@@ -54,13 +54,14 @@ class Poltrona{
     public $fabrica;
 
     //métodos
-    public function massagear(){
-
+    public function exibirOpcoes(){
+        return "Exibir opções de massagem.";
     }
     public function emitirAviso(){
-
+        return "Bateria fraca."
     }
     public function reclinar(){
+        return "Deseja inclinar a cadeira?";
     }
 
 }
@@ -71,20 +72,20 @@ class Geladeira{
 
     //atributos
     public $quantPortas;
-    public $tamanho;
+    public $capacidade;
     public $marca;
-    public $cor;
+    public $temperatura;
     public $modelo;
 
     //métodos
-    public function refrigerar(){
-
+    public function emitirAviso(){
+        return "Geladeira cheia!"
     }
-    public function listarProdutos(){
-
+    public function consultarCapacidade(){
+        return $capacidade;
     }
-    public function regularTemperatura(){
-        
+    public function exibirTemperatura(){
+        return $temperatura;
     }
 }
 
@@ -101,12 +102,13 @@ class Mouse{
 
     //métodos
     public function conectarFio(){
-        
+        return "Conexão efetuada!";
     }
     public function aletarBateria(){
-
+        return "Bateria baixa!";
     }
     public function conectarBt(){
+        return "Conexão estabelecida!"
     }
 
 }
@@ -123,14 +125,14 @@ class Lousa{
     public $tamanho;
 
     //métodos
-    public function conectarInternet(){
-
+    public function consultarPreco(){
+        return $preco;
     }
-    public function touch(){
-
+    public function exibirCor(){
+        return $cor;
     }
-    public function exibirVideos(){
-        
+    public function exibirTamanho(){
+        return $tamanho;
     }
 }
 
@@ -146,14 +148,14 @@ class contaBancaria{
     public $saldo;
 
     //métodos
-    public function exigirDigital(){
-
+    public function exibirSaldo(){
+        return $saldo;
     }
-    public function emitirAvisos(){
-
+    public function exibirTitular(){
+        return $nomeTitular;
     }
-    public function monitorarMovimentacoes(){
-
+    public function exibirNumeroConta(){
+        return $numeroConta;
     }
 }
 
