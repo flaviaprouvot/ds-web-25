@@ -5,10 +5,10 @@ class Veiculo{
 
     //atributos
     public $marca;
-    protected $seguro;
-    private $renavam;
+    public $seguro;
+    public $renavam;
 
-    //método
+    //metodo
     public function ligar(){
         return "Carro ligado.";
     }
@@ -16,8 +16,13 @@ class Veiculo{
 
 //instanciando objetos
     $polo = new Veiculo();
-    $polo->marca = "Wolkswagem";
+    $polo->marca = " Carro Wolkswagem";
     $polo->renavam = "123123123123";
+    echo $polo->renavam; 
+    echo "<br>";
+    echo $polo->marca;
+    echo "<br>";
+    echo "<br>";
 
 
 //Atividades
@@ -30,7 +35,7 @@ class TV{
     public $ano;
     public $marca;
 
-    //métodos
+    //metodos
     public function ligar(){
         return "TV ligada";
     }
@@ -41,6 +46,16 @@ class TV{
         return "TV conectada";
     }
 }
+
+    //instanciando objetos
+    $sansung = new TV();
+    $sansung->marca = "TV sansung";
+    $sansung->ano= "2019";
+    echo $sansung->marca; 
+    echo "<br>";
+    echo $sansung->ano;
+    echo "<br>";
+    echo "<br>";
 
 ///
 
@@ -53,9 +68,9 @@ class Poltrona{
     public $cor;
     public $fabrica;
 
-    //métodos
+    //metodos
     public function exibirOpcoes(){
-        return "Exibir opções de massagem.";
+        return "Exibir opcoes de massagem.";
     }
     public function emitirAviso(){
         return "Bateria fraca.";
@@ -65,6 +80,16 @@ class Poltrona{
     }
 
 }
+
+    //instanciando objetos
+    $sofa = new Poltrona();
+    $sofa->modelo = " Poltrona Reclinavel";
+    $sofa->cor = "Azul";
+    echo $sofa->modelo; 
+    echo "<br>";
+    echo $sofa->cor;
+    echo "<br>";
+    echo "<br>";
 
 //// 
 
@@ -77,7 +102,7 @@ class Geladeira{
     public $temperatura;
     public $modelo;
 
-    //métodos
+    //metodos
     public function emitirAviso(){
         return "Geladeira cheia!";
     }
@@ -88,6 +113,15 @@ class Geladeira{
         return $temperatura;
     }
 }
+
+    $geladeira = new Geladeira();
+    $geladeira->modelo = "Geladeira Frostfree";
+    $geladeira->quantPortas = "10 portas";
+    echo $geladeira->modelo; 
+    echo "<br>";
+    echo $geladeira->quantPortas;
+    echo "<br>";
+    echo "<br>";
 
 ///
 
@@ -100,18 +134,27 @@ class Mouse{
     public $cor;
     public $fio;
 
-    //métodos
+    //metodos
     public function conectarFio(){
-        return "Conexão efetuada!";
+        return "Conexao efetuada!";
     }
     public function aletarBateria(){
         return "Bateria baixa!";
     }
     public function conectarBt(){
-        return "Conexão estabelecida!";
+        return "Conexao estabelecida!";
     }
 
 }
+
+    $mouse = new Mouse();
+    $mouse->modelo = "Mouse sem fio";
+    $mouse->cor = "Branco";
+    echo $mouse->modelo; 
+    echo "<br>";
+    echo $mouse->cor;
+    echo "<br>";
+    echo "<br>";
 
 ///
 
@@ -124,7 +167,7 @@ class Lousa{
     public $cor;
     public $tamanho;
 
-    //métodos
+    //metodos
     public function consultarPreco(){
         return $preco;
     }
@@ -136,6 +179,14 @@ class Lousa{
     }
 }
 
+    $lousa = new Lousa();
+    $lousa->modelo = "Lousa digital";
+    $lousa->cor = "Verde";
+    echo $lousa->modelo; 
+    echo "<br>";
+    echo $lousa->cor;
+    echo "<br>";
+    echo "<br>";
 ///
 
 //Atividade 2
@@ -147,7 +198,7 @@ class contaBancaria{
     public $nomeTitular;
     public $saldo;
 
-    //métodos
+    //metodos
     public function exibirSaldo(){
         return $saldo;
     }
@@ -164,15 +215,39 @@ class contaBancaria{
     $contaCarol->numeroConta = "477.940.078-36"; // valores
     $contaCarol->nomeTitular = "Caroline Souza"; 
     $contaCarol->saldo = "R$1.700,00";
+    echo "<br>";
+    echo "<br>";
 
+        echo $contaCarol->numeroConta; 
+        echo "<br>";
+        echo $contaCarol->nomeTitular;
+        echo "<br>";
+        echo $contaCarol->saldo;
+    
     $contaBabi = new contaBancaria(); //inicio objeto
     $contaBabi->numeroConta = "463.625.488-09"; // valores
-    $contaBabi->nomeTitular = "Bárbara Savassa"; 
+    $contaBabi->nomeTitular = "Barbara Savassa"; 
     $contaBabi->saldo = "R$2,50";
+    echo "<br>";
+    echo "<br>";
+
+        echo $contaBabi->numeroConta; 
+        echo "<br>";
+        echo $contaBabi->nomeTitular;
+        echo "<br>";
+        echo $contaBabi->saldo;
 
     $contaRafa = new contaBancaria(); //inicio objeto
     $contaRafa->numeroConta = "413.076.548-51"; // valores
     $contaRafa->nomeTitular = "Rafaela Lage"; 
     $contaRafa->saldo = "R$145,00";
+    echo "<br>";
+    echo "<br>";
+
+        echo $contaRafa->numeroConta; 
+        echo "<br>";
+        echo $contaRafa->nomeTitular;
+        echo "<br>";
+        echo $contaRafa->saldo;
 
 ?>
