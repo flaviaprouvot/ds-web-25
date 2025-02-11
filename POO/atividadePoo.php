@@ -164,11 +164,11 @@ $contaCarol->saldo = "R$1.700,00";
 $contaBabi = new contaBancaria(); //inicio objeto
 $contaBabi->numeroConta = "463.625.488-09"; // valores
 $contaBabi->nomeTitular = "Bárbara Savassa"; 
-$contaBabi->saldo = "R$2,50"
+$contaBabi->saldo = "R$2,50";
 
 $contaRafa = new contaBancaria(); //inicio objeto
 $contaRafa->numeroConta = "413.076.548-51"; // valores
 $contaRafa->nomeTitular = "Rafaela Lage"; 
-$contaRafa->saldo = "R$145,00"
+$contaRafa->saldo = "R$145,00";
 
 ?>
