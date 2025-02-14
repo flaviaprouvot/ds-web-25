@@ -1,5 +1,6 @@
 //Crie um programa e uma função que receba um valor e uma porcentagem como
 //parâmetros. A função deve retornar o valor acrescido da porcentagem indicada.
+//
 
 function calcular(){
     var numero1= document.getElementById("numero1").value;

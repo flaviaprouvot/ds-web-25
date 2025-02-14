@@ -1,4 +1,5 @@
 //Crie um programa que peça ao usuário para inserir um número e informe se o número é positivo, negativo ou zero.
+//
 
 function verificar(){
     var numero= Number.parseInt(numero);

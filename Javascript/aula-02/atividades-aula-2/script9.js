@@ -1,4 +1,5 @@
 //Crie um programa que peça ao usuário para inserir um número e informe se o número é positivo, negativo ou zero.
+//
 
 function operacao(){
     var n1= document.getElementById("n1").value;

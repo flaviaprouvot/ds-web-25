@@ -1,5 +1,6 @@
 //Desenvolva um programa que contenha uma função que receba um número 
 //como parâmetro e ao clicar no botão ele valide se o valor é par ou ímpar
+//
 
 function alertaDeClique(){
     var number= Number.parseInt(number);

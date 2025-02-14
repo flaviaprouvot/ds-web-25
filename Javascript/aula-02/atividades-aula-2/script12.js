@@ -1,6 +1,7 @@
 //Crie um programa que peça ao usuário inserir os comprimentos de três lados de um
 //triângulo e determine se é um triângulo válido (a soma de dois lados é maior que o terceiro)
 //e, se for, classifique-o como equilátero, isósceles ou escaleno.
+//
 
 function verificar(){
 

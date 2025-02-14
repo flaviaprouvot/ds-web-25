@@ -1,4 +1,5 @@
 //Crie um programa que peça ao usuário para inserir um número e informe se é par ou ímpar.
+//
 
 function verificar(){
     var number= Number.parseInt(number);
