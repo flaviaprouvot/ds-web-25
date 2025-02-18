@@ -200,13 +200,15 @@ class contaBancaria{
 
     //metodos
     public function exibirSaldo(){
-        return $saldo;
+        return "O saldo e R$" .$this->saldo.",00";
     }
-    public function exibirTitular(){
-        return $nomeTitular;
+    public function depositar($deposito){
+        $this->saldo-= $deposito;
+        return "Esse e o novo saldo: R$" .$this->saldo.",00";
     }
-    public function exibirNumeroConta(){
-        return $numeroConta;
+    public function sacar($saque){
+        $this->saldo-= $saque;
+        return "Esse e o novo saldo: R$" .$this->saldo.",00";
     }
 }
 
@@ -214,20 +216,20 @@ class contaBancaria{
     $contaCarol = new contaBancaria(); //inicio objeto
     $contaCarol->numeroConta = "477.940.078-36"; // valores
     $contaCarol->nomeTitular = "Caroline Souza"; 
-    $contaCarol->saldo = "R$1.700,00";
+    $contaCarol->saldo = "1.700";
     echo "<br>";
     echo "<br>";
 
-        echo $contaCarol->numeroConta; 
+        echo "Titular da conta:" .$contaCarol->nomeTitular; 
         echo "<br>";
-        echo $contaCarol->nomeTitular;
+        echo $contaCarol->exibirSaldo();
         echo "<br>";
-        echo $contaCarol->saldo;
+        echo $contaCarol->sacar(20);
     
     $contaBabi = new contaBancaria(); //inicio objeto
     $contaBabi->numeroConta = "463.625.488-09"; // valores
     $contaBabi->nomeTitular = "Barbara Savassa"; 
-    $contaBabi->saldo = "R$2,50";
+    $contaBabi->saldo = "2";
     echo "<br>";
     echo "<br>";
 
@@ -240,7 +242,7 @@ class contaBancaria{
     $contaRafa = new contaBancaria(); //inicio objeto
     $contaRafa->numeroConta = "413.076.548-51"; // valores
     $contaRafa->nomeTitular = "Rafaela Lage"; 
-    $contaRafa->saldo = "R$145,00";
+    $contaRafa->saldo = "145";
     echo "<br>";
     echo "<br>";
 
