@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Cartões</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2{
+    color: #8919da;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+</style>
+
+</head>
+<body>
+    <h1>Cartões</h1>
+
+    <input type="text" id="nomeInput" placeholder="Digite o nome do cartão">
+    <input type="text" id="descricaoInput" placeholder="Digite a descrição">
+
+    <button onclick="adicionarCartao()">Adicionar cartão</button>
+
+    <h2>Cartões adicionados:</h2>
+    <div id="cartoesLista"></div>
+
+</body>
+<script src="scriptDesafio.js"></script>
+</html>
