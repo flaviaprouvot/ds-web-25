@@ -4,31 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio Cartões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-}
+        h1, h2 {
+            color: #8919da;
+        }
 
-h1, h2{
-    color: #8919da;
-}
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-input{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+        button {
+            padding: 10px 20px;
+            background-color: #8919da;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-</style>
+        button:hover {
+            background-color: #7a16c2;
+        }
 
+        .cartao {
+            background-color: white;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cartao button {
+            background-color: #ff4d4d;
+        }
+
+        .cartao button:hover {
+            background-color: #cc0000;
+        }
+    </style>
 </head>
 <body>
     <h1>Cartões</h1>
@@ -40,7 +69,6 @@ input{
 
     <h2>Cartões adicionados:</h2>
     <div id="cartoesLista"></div>
-
 </body>
 <script src="scriptDesafio.js"></script>
 </html>

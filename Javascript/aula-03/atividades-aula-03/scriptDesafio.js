@@ -1,48 +1,25 @@
-var cartoes = [];
-
 function adicionarCartao() {
-    var nomeInput = document.getElementById("nomeInput");
-    var descricaoInput = document.getElementById("descricaoInput");
+    const nome = document.getElementById('nomeInput').value;
+    const descricao = document.getElementById('descricaoInput').value;
 
-    var nome = nomeInput.value.trim();
-    var descricao = descricaoInput.value.trim();
+    if (nome && descricao) {
+        const cartao = document.createElement('div');
+        cartao.className = 'cartao';
 
-    if (nome !== "" && descricao !== "") {
-        var cartao = {
-            nome: nome,
-            descricao: descricao
-        }
-        cartoes.push(cartao);
-        atualizar();
-    }
+        const conteudo = document.createElement('div');
+        conteudo.innerHTML = `<strong>${nome}</strong><p>${descricao}</p>`;
+        cartao.appendChild(conteudo);
 
-    nomeInput.value = "";
-    descricaoInput.value = "";
+        const botaoExcluir = document.createElement('button');
+        botaoExcluir.innerText = 'Excluir';
+        botaoExcluir.onclick = function() {
+            cartoesLista.removeChild(cartao);
+        };
+        cartao.appendChild(botaoExcluir);
+
+        document.getElementById('cartoesLista').appendChild(cartao);
+
+        document.getElementById('nomeInput').value = '';
+        document.getElementById('descricaoInput').value = '';
+    } 
 }
-
-function atualizar() {
-    var cartoesLista = document.getElementById("cartoesLista");
-    cartoesLista.innerHTML = "";
-
-    for (var i = 0; i < cartoes.length; i++) {
-        var div = document.createElement("DIV");
-        div.innerHTML = "<strong>" + cartoes[i].nome + "</strong>: " + cartoes[i].descricao;
-
-        var botaoExcluir = document.createElement("button");
-        botaoExcluir.textContent = "Excluir";
-        botaoExcluir.onclick = (function(index) {
-            return function() {
-                excluirCartao(index);
-            };
-        })(i);
-
-        div.appendChild(botaoExcluir);
-        cartoesLista.appendChild(div);
-    }
-}
-
-function excluirCartao(index) {
-    cartoes.splice(index, 1);
-    atualizar();
-}
-
