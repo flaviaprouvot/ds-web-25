@@ -28,7 +28,7 @@
 
     ?>
     <div class="container">
-        <h2>Alteração de cadastro de produto: </h2>
+        <h2>Alteração de cadastro de cliente</h2>
         <div class="formulario">
             <form action="produtoUpdate.php?id=<?=$dados['id'];?>" method="POST" name="formulario" onsubmit="">
                 <label for="codigo">Codigo do Produto: </label>

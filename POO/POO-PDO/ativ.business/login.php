@@ -1,11 +1,7 @@
 <?php
     session_start();
-    
-    
-    if(isset($_SESSION['login']) && isset($_SESSION['senha'])){
-        echo "Sessão já iniciada. Redirecionando para intro.php...";
-        header('Location: intro.php');
-        exit();
+    if(isset($_SESSION['login']) and isset($_SESSION['senha'])){
+        header('Location: index.php');
     }
 ?>
 <!DOCTYPE html>
@@ -14,76 +10,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
     <div class="container">
-        <form action="" method="POST">
-            <label>Login (Email): </label>
-            <input type="text" name="login" required>
+        <form action="login.php" method="POST">
+            <label>Login: </label>
+            <input type="text" name="login">
             <br>
-            
-            <label>Cargo: </label>
-            <select name="cargo" required>
-                <option value="Administrador">Administrador</option>
-                <option value="Funcionário">Funcionário</option>
-            </select>
-            <br>
-
             <label>Senha: </label>
-            <input type="password" name="senha" required>
+            <input type="text" name="senha">
             <br>
-
-            <input type="submit" value="Entrar">
+            <input type="submit">
         </form>
     </div>
 </body>
 </html>
 
+
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        include_once('conexao.php');
+    session_start();
 
-        $login = trim($_POST['login']); 
-        $senha = trim($_POST['senha']); 
-        $cargo = trim($_POST['cargo']); 
+    //Verifica se veio do Formulário
+    if(isset($_POST['login'])){
+        //Verifica se o login esta correto
+        include_once('connection.php');
+        $login = $_POST['login'];
+        $senha = $_POST['senha'];
 
-        
-        echo "<p>Login (Email): " . $login . "</p>";
-        echo "<p>Senha: " . $senha . "</p>";
-        echo "<p>Cargo: " . $cargo . "</p>";
-
-        
-        if ($db) {
-            echo "<p>Conexão com o banco de dados bem-sucedida.</p>";
-        } else {
-            echo "<p style='color: red;'>Erro ao conectar ao banco de dados.</p>";
+        $sql = "SELECT * FROM funcionario WHERE email = '$login' and senha = '$senha'";
+        $resultado = mysqli_query($conexao, $sql);    
+        // Verifica se há registros
+        if (mysqli_num_rows($resultado) > 0) {
+            //Converte em Array Associativo
+            $linha = mysqli_fetch_assoc($resultado);
+            //Grava os dados na sessão
+            $_SESSION['login'] = $linha['email'];
+            $_SESSION['senha'] = $linha['senha'];
+        }else{
+            $_SESSION['erro'] = "Login ou senha invalida";
         }
 
-        
-        $sql = "SELECT * FROM admin WHERE email = :login AND senha = :senha AND cargo = :cargo";
-        $stmt = $db->prepare($sql);
-        $stmt->bindParam(':login', $login); 
-        $stmt->bindParam(':senha', $senha); 
-        $stmt->bindParam(':cargo', $cargo); 
-        $stmt->execute();
-
-        
-        if ($stmt->rowCount() > 0) {
-            echo "<p style='color: green;'>Usuário encontrado! Redirecionando...</p>";
-            $linha = $stmt->fetch(PDO::FETCH_ASSOC);
-            $_SESSION['id'] = $linha['id'];
-            $_SESSION['nome'] = $linha['nome'];
-            $_SESSION['login'] = $linha['email']; 
-            $_SESSION['senha'] = $linha['senha']; 
-            $_SESSION['cargo'] = $linha['cargo']; 
-
-            
-            header('Location: intro.php'); 
-            exit();
-        } else {
-            echo "<p style='color: red; text-align: center;'>Login, senha ou cargo inválidos.</p>";
-        }
     }
-?>
 
+?>

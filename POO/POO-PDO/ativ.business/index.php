@@ -13,7 +13,7 @@
             <li><a href="" class="meumenu meumenu-active" title="Home">Home</a></li>
             <li><a href="cliente.php" class="meumenu" title="Clientes">Clientes</a></li>
             <li><a href="produto.php" class="meumenu" title="Produtos">Produtos</a></li>
-            <li><a href="#" class="meumenu" title="Vendas">Vendas</a></li>
+            <li><a href="venda.php" class="meumenu" title="Vendas">Vendas</a></li>
         </ul>
     </div>
     <div class="container">    

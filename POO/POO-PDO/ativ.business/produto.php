@@ -17,7 +17,7 @@
             <li><a href="index.php" class="meumenu" title="Home">Home</a></li>
             <li><a href="cliente.php" class="meumenu" title="Clientes">Clientes</a></li>
             <li><a href="produto.php" class="meumenu meumenu-active" title="Produtos">Produtos</a></li>
-            <li><a href="#" class="meumenu" title="Vendas">Vendas</a></li>
+            <li><a href="venda.php" class="meumenu" title="Vendas">Vendas</a></li>
         </ul>
     </div>
     <div class="container">
@@ -33,7 +33,7 @@
                 <input type="text" name="nome" id="nome">
                 <p class="erro-input" id="erro-nome"><?=isset($_SESSION['erroNome']) ? $_SESSION['erroNome'] : "";?></p>
 
-                <label for="estoque">Estoque:</label>
+                <label for="estoque">Valor em estoque:</label>
                 <input type="text" name="estoque" id="estoque">
                 <p class="erro-input" id="erro-estoque"><?=isset($_SESSION['erroEstoque']) ? $_SESSION['erroEstoque'] : "";?></p>
 
@@ -48,7 +48,7 @@
     <?php  
         include 'conexao.php';
 
-        echo "<h2>Consulta de Produtos: </h2>";
+        echo "<h2>Consulta de Produtos:</h2>";
         $dados = $db->query("SELECT * FROM produtos");
         $todos = $dados->fetchAll(PDO::FETCH_ASSOC); //Todos os registros retornados
         echo "<table id='produtos'>";

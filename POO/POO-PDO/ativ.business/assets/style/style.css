@@ -33,14 +33,14 @@ input[type=submit] {
     width: 100%;
     padding: 10px;
     border: none;
-    background-color: #28a745;
+    background-color: #d50a7a;
     color: white;
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
 }
 input:hover[type=submit] {
-    background-color: #218838;
+    background-color: #cb04a7;
 }
 
 /* Mensagens de erro */
@@ -80,10 +80,10 @@ li .meumenu {
    transition: border-bottom .3s linear;
 }
 li .meumenu:hover {
-    border-bottom: 4px solid #4c4c4c;
+    border-bottom: 4px solid #f30092;
 }
 li .meumenu-active {
-    border-bottom: 4px solid #4c4c4c;
+    border-bottom: 4px solid #bd0078;
 }
 
 
@@ -111,7 +111,7 @@ li .meumenu-active {
     padding-left: 10px;
     padding-right: 10px;;
     text-align: center;
-    background-color: #04AA6D;
+    background-color: rgb(172, 0, 135);
     color: white;
   }
 
@@ -140,6 +140,71 @@ li .meumenu-active {
     padding-left: 10px;
     padding-right: 10px;;
     text-align: center;
-    background-color: #04AA6D;
+    background-color: rgb(172, 0, 135);
+    color: white;
+  }
+
+  /* Estilizando tela de vendas*/
+
+   /* Mensagens de aviso*/
+   #aviso {
+    color: red;
+    font-size: 12px;
+   }
+
+   /* Estilizando a tabela de carrinho */
+
+#tabelaCarrinho {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #tabelaCarrinho td, #customers th {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tabelaCarrinho tr:nth-child(even){background-color: #e6e6e6;}
+  
+  #tabelaCarrinho tr:hover {background-color: #ddd;}
+  
+  #tabelaCarrinho th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;;
+    text-align: center;
+    background-color: rgb(172, 0, 135);
+    color: white;
+  }
+
+
+  /* Estilizando tabela de consulta de vendas e produtos vendidos*/
+
+  #vendas {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #vendas td, #vendas th {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #vendas tr:nth-child(even){background-color: #e6e6e6;}
+  
+  #vendas tr:hover {background-color: #ddd;}
+  
+  #vendas th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;;
+    text-align: center;
+    background-color: rgb(172, 0, 135);
     color: white;
   }

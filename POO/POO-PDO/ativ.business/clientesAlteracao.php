@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +12,12 @@
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 <body>
-    <div class="menu">
-        <ul>
-            <li><a href="index.php" class="meumenu" title="Home">Home</a></li>
-            <li><a href="clientes.php" class="meumenu" title="Clientes">Clientes</a></li>
-            <li><a href="#" class="meumenu" title="Produtos">Produtos</a></li>
-            <li><a href="#" class="meumenu" title="Vendas">Vendas</a></li>
+    <div>
+        <ul class="menu">
+            <li class="menu-li"><a href="index.php" class="meumenu" title="Home">Home</a></li>
+            <li class="menu-li"><a href="cliente.php" class="meumenu" title="Clientes">Clientes</a></li>
+            <li class="menu-li"><a href="produto.php" class="meumenu" title="Produtos">Produtos</a></li>
+            <li class="menu-li"><a href="venda.php" class="meumenu" title="Vendas">Vendas</a></li>
         </ul>
     </div>
     <hr>
