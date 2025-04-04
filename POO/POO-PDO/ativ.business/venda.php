@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business System</title>
-    <link rel="shortcut icon" type="imagex/png" href="./assets/img/ico.svg">
+    <link rel="shortcut icon" type="imagex/png" href="../assets/img/ico.svg">
     <link rel="stylesheet" href="./assets/style/style.css">
 
 </head>
@@ -18,7 +18,8 @@
             <li><a href="cliente.php" class="meumenu" title="Clientes">Clientes</a></li>
             <li><a href="produto.php" class="meumenu" title="Produtos">Produtos</a></li>
             <li><a href="venda.php" class="meumenu meumenu-active" title="Vendas">Vendas</a></li>
-            <li><a href="vendas.php" class="meumenu" title="venda">Minhas vendas</a></li>
+            <li><a href="./venda/vendaHistorico.php" class="meumenu" title="venda">Minhas vendas</a></li>
+            
         </ul>
     </div>
     <div class="container">
@@ -33,7 +34,7 @@
     <?php  
         include 'conexao.php';
 
-        echo "<h4>Selecione um cliente:</h4>";
+        echo "<h3>Selecione um cliente:</h3>";
         $dados = $db->query("SELECT * FROM clientes");
         $todos = $dados->fetchAll(PDO::FETCH_ASSOC); //Todos os registros retornados
         echo "<table id='clientes'>";
@@ -61,7 +62,7 @@
 
         /* ==================== FIM DO CLIENTE E INICIO DO PRODUTO ==================== */
 
-        echo "<h4>Selecione os Produtos:</h4>";
+        echo "<h3>Selecione os Produtos:</h3>";
         $dados = $db->query("SELECT * FROM produtos");
         $todos = $dados->fetchAll(PDO::FETCH_ASSOC); //Todos os registros retornados
         echo "<table id='produtos'>";
