@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Desafio Bootstrap - Aula 14/10</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+          --cor-principal: #0b0033;  
+          --cor-secundaria: #6a0dad; 
+          --cor-destaque: #00bfff;   
+          --cor-fundo: #0a0a2a;       
+        }
+      
+        body {
+          padding-top: 70px;
+          background-color: var(--cor-fundo);
+          color: #f8f9fa;
+          font-family: "Poppins", sans-serif;
+        }
+      
+        .navbar {
+          background-color: var(--cor-principal);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+        }
+      
+        .navbar-brand, .nav-link {
+          color: #ffffff !important;
+          font-weight: 500;
+        }
+      
+        .nav-link:hover {
+          color: var(--cor-destaque) !important;
+        }
+      
+        .btn-custom {
+          background-color: var(--cor-secundaria);
+          color: white;
+          border: none;
+          transition: 0.3s;
+          box-shadow: 0 0 10px rgba(106, 13, 173, 0.5);
+        }
+      
+        .btn-custom:hover {
+          background-color: var(--cor-destaque);
+          box-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+        }
+      
+        footer {
+          background-color: var(--cor-principal);
+          color: white;
+          padding: 15px 0;
+          text-align: center;
+          letter-spacing: 1px;
+        }
+      
+        .card {
+          background-color: #1a103d;
+          border: none;
+          color: #eaeaea;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+          transition: transform 0.3s, box-shadow 0.3s;
+          border-radius: 10px;
+        }
+      
+        .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 0 20px rgba(106, 13, 173, 0.5);
+        }
+      
+        .card img {
+          height: 200px;
+          object-fit: cover;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+      
+        .carousel-inner img {
+          width: 1200px;
+          height: 400px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 10px;
+        }
+      
+        .carousel {
+          max-width: 1200px;
+          margin: auto;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 0 25px rgba(0, 0, 50, 0.6);
+        }
+      </style>
+      
+      
+
+  </head>
+  <body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">AstroWorld</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <section class="text-center" style="background: linear-gradient(135deg, #0b0033, #1a103d); padding: 60px 0;">
+        <div class="container">
+      
+          <div class="alert alert-dismissible fade show" role="alert" style="background-color: #6a0dad; color: #fff; box-shadow: 0 0 15px rgba(106,13,173,0.5);">
+            <strong>Bem-vindo ao AstroWorld!</strong> Prepare-se para uma jornada incrível pelo universo!!
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      
+          <h1 class="mb-3" style="color: #e0e0ff;">Bem-vindo ao AstroWorld</h1>
+          <p class="mb-4" style="color: #e0e0ff;">Aqui você viajará pelo universo sem sair de casa !!!!</p>
+          <a href="#sobre" class="btn btn-custom btn-lg">Saiba Mais</a>
+        </div>
+    </section>
+    <br><br>
+  
+
+    
+
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.ufmg.br/espacodoconhecimento/wp-content/uploads/2025/02/capa-como-o-universo-%C3%A9-colorido.png" class="d-block w-100" alt="Imagem 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://s2.glbimg.com/rdwtAM9qBG1qrQu7rDs4I1Vu9-s=/e.glbimg.com/og/ed/f/original/2019/11/05/untitled-design-101.png" class="d-block w-100" alt="Imagem 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://conexao.ufrj.br/wp-content/uploads/2020/07/Artur-Mo%C3%AAs-1-4-1200x800.jpg" class="d-block w-100" alt="Imagem 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+   </div>
+
+
+
+    <section id="sobre" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Galáxias vizinhas</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="https://png.pngtree.com/png-vector/20250609/ourmid/pngtree-exploring-the-andromeda-galaxy-and-its-significance-in-understanding-our-place-png-image_16006345.png" class="card-img-top" alt="galaxia 1">
+              <div class="card-body">
+                <h5 class="card-title"> Galáxia de Andrômeda</h5>
+                <p class="card-text">É a galáxia espiral mais próxima da Via Láctea, localizada a aproximadamente 2,5 milhões de anos-luz de distância e visível a olho nu em locais com pouca poluição luminosa.</p>
+                <a href="#" class="btn btn-custom">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="https://cdn.eso.org/images/screen/eso1424a.jpg" class="card-img-top" alt="galaxia 2">
+              <div class="card-body">
+                <h5 class="card-title">Galáxia do Triângulo</h5>
+                <p class="card-text">É uma galáxia espiral localizada a cerca de 2,7 a 3 milhões de anos-luz da Terra, na constelação de Triângulo.</p>
+                <a href="#" class="btn btn-custom">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/SagDIG.jpg" class="card-img-top" alt="galaxia 3">
+              <div class="card-body">
+                <h5 class="card-title">Galáxia Anã de Sagitário</h5>
+                <p class="card-text">É uma galáxia satélite da Via Láctea que orbita a nossa galáxia e está em processo de ser totalmente absorvida por ela.</p>
+                <a href="#" class="btn btn-custom">Saiba Mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4 fw-bold">Perguntas Frequentes</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta1" aria-expanded="true">
+                Qual é aproximadamente o tamanho do universo?
+              </button>
+            </h2>
+            <div id="pergunta1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                O tamanho aproximado do universo observável é de cerca de 93 bilhões de anos-luz de diâmetro, ou um raio de aproximadamente 46,5 bilhões de anos-luz em cada direção a partir da Terra. No entanto, o tamanho do universo inteiro (não apenas o que podemos ver) é desconhecido e pode ser infinito. 
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta2">
+                Qual a idade do universo?
+              </button>
+            </h2>
+            <div id="pergunta2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                A idade estimada do Universo é de aproximadamente 13,8 bilhões de anos. 
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pergunta3">
+                Como ocorre a expansão do universo?
+              </button>
+            </h2>
+            <div id="pergunta3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                A expansão do universo acontece porque o próprio espaço está em constante crescimento, um fenômeno que começou com o Big Bang há cerca de 13,8 bilhões de anos. Esse processo faz com que galáxias distantes se afastem umas das outras, como passas em um pão que está crescendo, e essa expansão está se acelerando devido a uma força misteriosa chamada energia escura.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   
+    <section id="contato" class="text-center py-5">
+      <button type="button" class="btn btn-custom btn-lg" data-bs-toggle="modal" data-bs-target="#modalContato">
+        Entre em contato
+      </button>
+    </section>
+
+    <div class="modal fade" id="modalContato" tabindex="-1" aria-labelledby="modalContatoLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-light">
+            <h5 class="modal-title" id="modalContatoLabel">Formulário de Contato</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-custom w-100">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <footer class="text-center">
+      © 2025 - Criado por <strong>Flávia Prouvot</strong> - Todos os direitos reservados.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
