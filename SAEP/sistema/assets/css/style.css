@@ -1,0 +1,20 @@
+
+body { 
+    background-color: #8bc5ff; 
+}
+
+.distancia-top{
+    margin-top: 40px;
+}
+
+.form-section { 
+    background: rgb(218, 117, 255); 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+
+.fakeimg {
+    height: 200px;
+    background: #ffa9e9;
+}
